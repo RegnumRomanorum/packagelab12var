@@ -3,6 +3,7 @@ package main
 import (
 	"packagelab12var/mobiletariff"
 
+	"github.com/dustin/go-humanize"
 	"github.com/fatih/color"
 )
 
@@ -34,5 +35,5 @@ func main() {
 
 	color.Cyan("Отчёт по тарифу:")
 	color.Yellow(report)
-	color.Green("Итоговая сумма после скидки: %.2f", total)
+	color.Green("Итоговая сумма после скидки: %s", humanize.Ftoa(total))
 }
